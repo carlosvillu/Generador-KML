@@ -5,11 +5,40 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Generador KML</title>
-  <%= stylesheet_link_tag 'scaffold' %>
+   <%= javascript_include_tag :defaults %>
+
+  <!-- Contenido extra de la cabecera -->
+  <%= yield(:head) %>
+  
+  <%= stylesheet_link_tag 'reset' %>
+  <%= stylesheet_link_tag '960' %>
+  <%= stylesheet_link_tag 'estilo' %>
+  <%= stylesheet_link_tag 'jquery-ui' %>
+  <!--[if IE]>
+		<link rel="stylesheet" href="../stylesheets/estilo_ie.css" type="text/css" media="screen" charset="utf-8" />
+	<![endif]-->
 </head>
 <body style="background: #EEEEEE;">
-
-	<%= yield  %>
-
+	
+	<div id="cabecera" class="container_12">
+		<div class="grid_12">
+			<img id="logo" src="/images/varios/logo.png" alt="logo" width="334" height="52"/>
+			<div	class="clear"></div>
+		</div>
+		
+		<div class="grid_12" id="breadcrumb">
+			<div class="grid_11 prefix_1">
+				<ul>
+					<li class="actual primero">1. Elegir localización</li>
+					<li>2. Agregar contenido</li>
+					<li>3. Obtener fichero</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="main" class="container_12">
+		<%= yield  %>
+	</div>
 </body>
 </html>

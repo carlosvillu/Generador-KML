@@ -1,0 +1,9 @@
+/*CABECERA*/
+#cabecera{height: 100px; background: transparent url(../images/fondos/cabecera.png) 0 0;}
+#cabecera #logo{margin-top: 20px;}
+
+#breadcrumb{height: 50px; background: transparent url(../images/fondos/breadcrumb.png) 0 0; margin-top: 32px;}
+#breadcrumb ul{margin-top: 15px; font-size: 24px;}
+#breadcrumb ul li{display: inline; padding-left: 15px;color: rgb(180, 188, 190);}
+#breadcrumb ul li:not(.primero){background: transparent url(../images/varios/separador.png) no-repeat left;}
+#breadcrumb ul li.actual{color: black;}
