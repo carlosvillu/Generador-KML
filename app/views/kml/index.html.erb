@@ -1,1 +1,14 @@
-
+<%- content_for(:head) do -%>
+	<%= javascript_include_tag "administracion/admin_gru_form.js" %>
+<%- end -%>
+<% form_tag ({:controller => :kml, :action => :localizacion}, {:id => "formulario"}) do -%>
+	<label for="direccion">
+		Direccion<span>(<a>¿que es esto?</a>)</span>
+		<span class="ejemplo">ej.: calle pintor guerrero del castillo, 2</span>
+	</label>
+	<%= text_field_tag('direccion', nil, {:class => "texto"}) %>
+	<div id="mapa">
+	</div>
+	<input id="b_introducir" type="button"/>
+	<a id="cancelar">Cancelar</a>
+<% end -%>

@@ -18,27 +18,32 @@
 		<link rel="stylesheet" href="../stylesheets/estilo_ie.css" type="text/css" media="screen" charset="utf-8" />
 	<![endif]-->
 </head>
-<body style="background: #EEEEEE;">
+<body style="">
 	
 	<div id="cabecera" class="container_12">
 		<div class="grid_12">
 			<img id="logo" src="/images/varios/logo.png" alt="logo" width="334" height="52"/>
-			<div	class="clear"></div>
 		</div>
-		
-		<div class="grid_12" id="breadcrumb">
-			<div class="grid_11 prefix_1">
+			
+		<div class="container_12" >
+			<div id="breadcrumb" class="grid_11 prefix_1">
 				<ul>
-					<li class="actual primero">1. Elegir localización</li>
+					<li class="actual">1. Elegir localización</li>
 					<li>2. Agregar contenido</li>
-					<li>3. Obtener fichero</li>
+					<li class="ultimo">3. Obtener fichero</li>
 				</ul>
 			</div>
 		</div>
+		
 	</div>
+	
 	<div class="clear"></div>
-	<div id="main" class="container_12">
-		<%= yield  %>
+	
+	<div id="wrapper" class="container_12">
+		<div id="main" class="grid_10 prefix_1 suffix_1">
+			<%= yield  %>
+		</div>
 	</div>
+	
 </body>
 </html>
