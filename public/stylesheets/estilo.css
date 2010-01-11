@@ -39,3 +39,5 @@ input#direccion{width: 459px; font-size: 13px;}
 #mapa{height: 329px; width: 469px; border: 1px solid #0367A6; margin-top: 10px;}
 #b_introducir{ height: 27px; width: 152px; background-image: url(../images/botones/introducir.png);}
 #b_introducir:ACTIVE{height: 27px; width: 152px;}
+#b_buscar{ height: 27px; width: 57px; background-image: url(../images/botones/buscar.png);}
+#b_buscar:ACTIVE{height: 27px; width: 57px;}

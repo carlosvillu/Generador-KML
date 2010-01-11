@@ -1,12 +1,15 @@
 <%- content_for(:head) do -%>
-	<%= javascript_include_tag "administracion/admin_gru_form.js" %>
+	<!-- <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"> -->
+	<%= javascript_include_tag "principal" %>
+	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAmwzzgWFz7PIyq6dsDM5OYBTJQa0g3IQ9GZqIMmInSLzwtGDKaBRaNo20b8wvW-uakeKZ1mJvW4nQXw" type="text/javascript"></script>
 <%- end -%>
+
 <% form_tag ({:controller => :kml, :action => :localizacion}, {:id => "formulario"}) do -%>
 	<label for="direccion">
 		Direccion<span>(<a>¿que es esto?</a>)</span>
 		<span class="ejemplo">ej.: calle pintor guerrero del castillo, 2</span>
 	</label>
-	<%= text_field_tag('direccion', nil, {:class => "texto"}) %>
+	<%= text_field_tag('direccion', nil, {:class => "texto"}) %> <input id="b_buscar" type="button"/>
 	<div id="mapa">
 	</div>
 	<input id="b_introducir" type="button"/>
