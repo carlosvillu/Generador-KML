@@ -22,15 +22,15 @@
 	
 	<div id="cabecera" class="container_12">
 		<div class="grid_12">
-			<img id="logo" src="/images/varios/logo.png" alt="logo" width="334" height="52"/>
+			<%= link_to(image_tag('varios/logo.png', :size => "334x52", :border => 0, :id => "logo"), :controller => "kml")%>
 		</div>
 			
 		<div class="container_12" >
 			<div id="breadcrumb" class="grid_11 prefix_1">
 				<ul>
-					<li class="actual">1. Elegir localización</li>
-					<li>2. Agregar contenido</li>
-					<li class="ultimo">3. Obtener fichero</li>
+					<li class="<%= "actual" if controller.action_name == "index"%>">1. Elegir localización</li>
+					<li class="<%= "actual" if controller.action_name == "descripcion"%>">2. Agregar contenido</li>
+					<li class="ultimo <%= "actual" if controller.action_name == "descargar_fichero"%>">3. Obtener fichero</li>
 				</ul>
 			</div>
 		</div>
@@ -40,8 +40,18 @@
 	<div class="clear"></div>
 	
 	<div id="wrapper" class="container_12">
+		<!-- contenedo de los mensajes -->
+		<div class="grid_6 prefix_3 suffix_3">
+			<div id="error" class="mensaje" style="display:none;">Esto es un mensaje de error</div>
+			<div id="info" class="mensaje" style="display:none;">Esto es un mensaje de info</div>
+			<div id="notice" class="mensaje" style="display:none;">Esto es un mensaje de notice</div>
+			<div id="success" class="mensaje" style="display:none;">Esto es un mensaje de success</div>
+		</div>
+		
+		<!-- contenedor principal -->
 		<div id="main" class="grid_10 prefix_1 suffix_1">
 			<%= yield  %>
+			<div class="clear"></div>
 		</div>
 	</div>
 	
