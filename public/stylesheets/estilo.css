@@ -60,3 +60,7 @@ input#direccion{width: 459px; font-size: 13px;}
 #vista_previa{height: 329px; width: 297px; border: 1px solid #0367A6; margin-top: 10px;}
 #b_obtener{ height: 27px; width: 100px; background-image: url(../images/botones/obtener.png);}
 #b_ontener:ACTIVE{height: 27px; width: 100px;}
+
+/*obtener fichero*/
+#b_comienzo{ height: 27px; width: 100px; background-image: url(../images/botones/comienzo.png);}
+#b_comienzo:ACTIVE{height: 27px; width: 100px;}

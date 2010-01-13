@@ -1,0 +1,15 @@
+<%- content_for(:head) do -%>
+	<script>
+		$(function(){
+			document.location.href='/kml/descargar?<%="descripcion=#{@descripcion}&latitud=#{@latitud}&longitud=#{@longitud}"%>';
+			$("#b_comienzo").click(function(){
+				document.location.href="/kml";	
+			});
+		});
+	</script>
+<%- end -%>
+<label for="descripcion">
+	El fichero KML ha sido correctamente generado<span>(<a>¿que hacer ahora?</a>)</span>
+</label>
+<br/>
+<input id="b_comienzo" type="button"/>
