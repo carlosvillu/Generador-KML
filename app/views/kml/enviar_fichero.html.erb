@@ -1,15 +1,10 @@
-<%- content_for(:head) do -%>
-	<script>
-		$(function(){
-			document.location.href='/kml/descargar?<%="descripcion=#{@descripcion}&latitud=#{@latitud}&longitud=#{@longitud}"%>';
-			$("#b_comienzo").click(function(){
-				document.location.href="/kml";	
-			});
-		});
-	</script>
-<%- end -%>
 <label for="descripcion">
 	El fichero KML ha sido correctamente generado<span>(<a>¿que hacer ahora?</a>)</span>
 </label>
+<!-- <input id="b_comienzo" type="button"/> -->
 <br/>
-<input id="b_comienzo" type="button"/>
+<%= link_to('<input id="b_obtener" type="button"/>',
+						:action => "descargar",
+						"descripcion" => @descripcion, "latitud" => @latitud, "longitud" => @longitud) %>
+						
+<%= link_to 'Ir al comienzo', :controller => "/kml" %>
