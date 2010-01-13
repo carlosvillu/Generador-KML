@@ -1,10 +1,8 @@
 <label for="descripcion">
-	El fichero KML ha sido correctamente generado<span>(<a>¿que hacer ahora?</a>)</span>
+	El fichero KML ha sido correctamente generado
 </label>
 <!-- <input id="b_comienzo" type="button"/> -->
-<br/>
-<%= link_to('<input id="b_obtener" type="button"/>',
+<%= link_to(image_tag("botones/descargar.png"),
 						:action => "descargar",
 						"descripcion" => @descripcion, "latitud" => @latitud, "longitud" => @longitud) %>
 						
-<%= link_to 'Ir al comienzo', :controller => "/kml" %>
