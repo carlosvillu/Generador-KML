@@ -54,6 +54,10 @@ input#direccion{width: 459px; font-size: 13px;}
 #b_buscar{ height: 27px; width: 57px; background-image: url(../images/botones/buscar.png);}
 #b_buscar:ACTIVE{height: 27px; width: 57px;}
 
+/*LOG*/
+#mapa{float: left;}
+#log{float:left; margin-left:20px; margin-top:10px; min-height:300px; width:287px;}
+
 /*descripcion*/
 .contenedor_descriptor{border: 1px solid #0367A6; margin-top: 10px;}
 #descripcion{height: 319px; width: 348px; padding: 5px;}

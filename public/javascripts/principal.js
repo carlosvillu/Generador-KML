@@ -16,11 +16,17 @@ function inicializar(){
   map.setUIToDefault();
 }
 
+// Agregamos un nueva coordenada al log
+function agregar_coordenadas_log(latlng){
+	$('#log').append('<br/>'+latlng.lng()+','+latlng.lat())
+}
+
 // colocamos una nueva marca, con el icono por defecto
 function cambiar_marca(overlay, latlng){
 	map.clearOverlays();
 	map.addOverlay(new GMarker(latlng, G_DEFAULT_ICON, true));
 	actualizar_inputs_posicion(latlng);
+	agregar_coordenadas_log(latlng);
 }
 
 // actualiza el valor de las campos ocultos que guardan la posición 
